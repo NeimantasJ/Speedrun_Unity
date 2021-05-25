@@ -1982,8 +1982,8 @@ GameObject:
   - component: {fileID: 878198054}
   - component: {fileID: 878198053}
   m_Layer: 5
-  m_Name: Record1
-  m_TagString: Untagged
+  m_Name: Record3
+  m_TagString: UIRecord
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13275,7 +13275,7 @@ GameObject:
   - component: {fileID: 1666851093}
   m_Layer: 5
   m_Name: Record1
-  m_TagString: Untagged
+  m_TagString: UIRecord
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13924,6 +13924,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 1694794098}
   levelsMenu: {fileID: 1367562144}
   instructionsMenu: {fileID: 1282783579}
+  levelCount: 3
 --- !u!114 &1909294372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13952,7 +13953,7 @@ GameObject:
   - component: {fileID: 1910211577}
   m_Layer: 5
   m_Name: Record2
-  m_TagString: Untagged
+  m_TagString: UIRecord
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

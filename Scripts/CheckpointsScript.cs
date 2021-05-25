@@ -60,8 +60,6 @@ public class CheckpointsScript : MonoBehaviour
 
 	private bool IsNewRecord()
     {
-		Debug.Log(PlayerPrefs.HasKey(levelName));
-		Debug.Log(PlayerPrefs.GetFloat(levelName));
 		if(PlayerPrefs.HasKey(levelName) && PlayerPrefs.GetFloat(levelName) > timerScript.GetTime() || !PlayerPrefs.HasKey(levelName))
         {
 			return true;
@@ -71,7 +69,9 @@ public class CheckpointsScript : MonoBehaviour
 
 	private void SaveNewRecord()
     {
+		Debug.Log(timerScript.GetTime());
 		PlayerPrefs.SetFloat(levelName, timerScript.GetTime());
+		PlayerPrefs.Save();
     }
 
 	private void OnTriggerEnter(Collider other) {

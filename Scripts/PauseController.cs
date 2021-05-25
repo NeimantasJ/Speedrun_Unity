@@ -27,12 +27,27 @@ public class PauseController : MonoBehaviour
 
     public void RestartLevel() {
         timerScript.RestartTimer();
-        Scenes.RestartScene();
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(GameObject player in players)
+        {
+            NetworkPlayer script = player.GetComponent<NetworkPlayer>();
+            script.ResetPlayer();
+        }
+        Hide(pausePanel);
+        //Scenes.RestartScene();
     }
 
     public void GoToScene(int i) {
         //Time.timeScale = 1;
-        Scenes.LoadOtherScene(i);
+        StartCoroutine(SwitchLevel(i));
+    }
+
+    IEnumerator SwitchLevel(int level)
+    {
+        PhotonNetwork.Disconnect();
+        while (PhotonNetwork.connected)
+            yield return null;
+        Scenes.LoadOtherScene(level);
     }
 
     public void HidePausePanel() {

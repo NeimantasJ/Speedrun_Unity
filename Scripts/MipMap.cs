@@ -33,17 +33,4 @@ public class MipMap : MonoBehaviour
         lineRenderer.startWidth = 12f;
         lineRenderer.endWidth = 12f;
     }
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        MipMapCam.transform.position = (new Vector3(
-            Car.transform.position.x,
-            MipMapCam.transform.position.y,
-            Car.transform.position.z));
-        Point.transform.position = (new Vector3(
-            Car.transform.position.x,
-            Point.transform.position.y,
-            Car.transform.position.z));
-    }*/
 }
